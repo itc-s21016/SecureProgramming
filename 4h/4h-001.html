@@ -7,6 +7,9 @@
       var hash = decodeURIComponent(window.location.hash.slice(1));
       var color = document.getElementById("color");
       color.innerHTML = hash;
+      /* 対策版 color.textContent = hash;
+      innerHTMLプロパティをtextContentプロパティ
+      に置き換えることでDOM Based XSSは対策できる*/
     }
   </script>
   <a href="#赤">赤</a>
